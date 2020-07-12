@@ -15,13 +15,13 @@
 
                     <div class="form-group marb8">
                         <label>用 户 名</label>
-                        <input id="jsRegUsername" name="account" v-model="username" type="text" placeholder="必须以字母开头，不得超过10位字符">
+                        <input id="jsRegUsername" name="account" maxlength="10" v-model="username" type="text" placeholder="必须以字母开头，不得超过10位字符">
                     </div>
                     <p class="error-text marb8" v-show="error.username">{{error.username}}</p>
 
                     <div class="form-group marb8">
                         <label>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
-                        <input id="jsPhoneRegPwd" name="password_m" type="password" v-model="password" placeholder="请输入6-20位非中文字符密码">
+                        <input id="jsPhoneRegPwd" maxlength="20" minlength="6" name="password_m" type="password" v-model="password" placeholder="请输入6-20位非中文字符密码">
                     </div>
                      <p class="error-text marb8" v-show="error.password">{{error.password}}</p>
                     <div class="error btns" id="jsMobileTips"></div>
